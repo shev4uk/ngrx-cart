@@ -19,7 +19,7 @@ export const cartReducer = createReducer(
         products: state.products.map((p, index) => index === isProductIndex
           ? {
             ...p,
-            quantity: p.quantity + product.quantity
+            quantity: +p.quantity + +product.quantity
           }
           : p)
       })
